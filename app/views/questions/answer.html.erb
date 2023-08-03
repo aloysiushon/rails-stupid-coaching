@@ -1,0 +1,28 @@
+<style>
+    .custom-border {
+      border-left: 5px solid #c7c8c8;
+      padding-left: 10px;
+    }
+  </style>
+
+<div class="m-4">
+  <h1>Stupid Coaching</h1>
+
+  <blockquote class="p-2 custom-border">
+    <p>
+      <% if @your_message.blank? %>
+        😶
+      <% else %>
+        <%= @your_message %>
+      <% end %>
+    </p>
+    <cite>-You</cite>
+  </blockquote>
+
+  <blockquote class="bg-warning bg-opacity-25 p-2 custom-border">
+    <p><%= @answer %></p>
+    <cite>-Your coach</cite>
+  </blockquote>
+
+  <%= link_to "Ask a new question", ask_path %>
+</div>
